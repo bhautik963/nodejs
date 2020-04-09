@@ -7,10 +7,13 @@ const dbname = "bhautik";
 const collection = ['bhautik'];
 const multer = require('multer');
 
+
+const MONGODB_URI = process.env.MONGODB_URI
+
 const app = express();
 app.use(bodyParser.json());
 app.use(cors());
-var db = mongoose(dbname, collection);
+var db = mongoose.connect('mongodb+srv://bhautik:123456#%@angularcurd-hbmz8.mongodb.net/test?retryWrites=true&w=majority',{userNewUrlParser: true})
 
 app.get('/', function (req, res) {
     res.send("hello from server");
