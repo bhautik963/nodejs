@@ -3,8 +3,6 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongojs');
 const cors = require('cors');
 const port = process.env.PORT || 3000
-const dbname = "bhautik";
-const collection = ['bhautik'];
 const multer = require('multer');
 
 
