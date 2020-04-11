@@ -19,7 +19,7 @@ app.use(function(req, res, next) {
 
 var db = mongoose('mongodb+srv://bhautik:1234567890@angularcurd-hbmz8.mongodb.net/bhautik?retryWrites=true&w=majority');
 app.get('/', function (req, res) {
-    res.send("hello from server 123 !!!!");
+    res.send("hello from server 1234 !!!!");
 });
 
 app.post('/addstud', function (req, res) {
