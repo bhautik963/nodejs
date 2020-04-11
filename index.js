@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongojs');
 const cors = require('cors');
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 5000
 const multer = require('multer');
 
 
@@ -11,6 +11,11 @@ const MONGODB_URI = process.env.MONGODB_URI
 const app = express();
 app.use(bodyParser.json());
 app.use(cors());
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  next();
+});
+
 var db = mongoose('mongodb+srv://bhautik:1234567890@angularcurd-hbmz8.mongodb.net/bhautik?retryWrites=true&w=majority');
 app.get('/', function (req, res) {
     res.send("hello from server 123 !!!!");
