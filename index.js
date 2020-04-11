@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 app.use(cors());
 var db = mongoose('mongodb+srv://bhautik:1234567890@angularcurd-hbmz8.mongodb.net/bhautik?retryWrites=true&w=majority');
 app.get('/', function (req, res) {
-    res.send("hello from server");
+    res.send("hello from server 123 !!!!");
 });
 
 app.post('/addstud', function (req, res) {
