@@ -72,6 +72,7 @@ app.get("/getuser",function(req,res){
               }  
               else{               
                   res.json(data);
+		      consol.log(data);
                   }  
           });  
   });
