@@ -11,7 +11,7 @@ const MONGODB_URI = process.env.MONGODB_URI
 const app = express();
 app.use(bodyParser.json());
 app.use(cors());
-var db = mongoose('mongodb+srv://bhautik:bposhiya848#@angularcurd-hbmz8.mongodb.net/bhautik?retryWrites=true&w=majority');
+var db = mongoose('mongodb+srv://bhautik:1234567890@angularcurd-hbmz8.mongodb.net/bhautik?retryWrites=true&w=majority');
 app.get('/', function (req, res) {
     res.send("hello from server");
 });
